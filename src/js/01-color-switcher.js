@@ -2,19 +2,19 @@ const bodyEl = document.querySelector('body');
 const startBtn = document.querySelector('button[data-start]');
 const stopBtn = document.querySelector('button[data-stop]');
 
-startBtn.addEventListener('click', startChangeBackgroud);
-stopBtn.addEventListener('click', stopChangeBackgroud);
+startBtn.addEventListener('click', startChangeBackground);
+stopBtn.addEventListener('click', stopChangeBackground);
 
 let intervalId = 0;
 
-function startChangeBackgroud() {
+function startChangeBackground() {
   intervalId = setInterval(() => {
     bodyEl.style.background = getRandomHexColor();
     startBtn.setAttribute('disabled', 'true');
   }, 1000);
 }
 
-function stopChangeBackgroud() {
+function stopChangeBackground() {
   clearInterval(intervalId);
   startBtn.removeAttribute('disabled');
 }

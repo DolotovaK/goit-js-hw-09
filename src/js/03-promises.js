@@ -13,7 +13,7 @@ let inputValues = {
   delay: 0,
   step: 0,
   amount: 0,
-  position: 0,
+  position: 1,
 };
 
 form.addEventListener(
